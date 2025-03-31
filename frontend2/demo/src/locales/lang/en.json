@@ -1,0 +1,120 @@
+{
+    "nav": {
+        "dashboard": {
+            "dashboard": "Tổng Quan",
+            "ecommerce": "Thống Kê",
+            "analytic": "Analytic",
+            "project": "Project",
+            "marketing": "Marketing"
+        },
+        "concepts": "Tính Năng",
+        "conceptsAi": {
+            "ai": "AI",
+            "chat": "Chat",
+            "image": "Image"
+        },
+        "conceptsCustomers": {
+            "customers": "Khách Hàng",
+            "customerList": "Danh Sách",
+            "customerEdit": "Edit",
+            "customerCreate": "Create",
+            "customerDetails": "Details"
+        },
+        "conceptsOrders": {
+            "orders": "Quản Lý Gói",
+            "orderList": "List",
+            "orderEdit": "Edit",
+            "orderDetails": "Details",
+            "orderCreate": "Tạo"
+        },
+        "calendar": "Calendar",
+        "fileManager": "Quản Lý File",
+        "mail": "Mail",
+        "chat": "Chat",
+        "uiComponents": "UI Components",
+        "uiComponentsCommon": {
+            "common": "Common",
+            "grid": "Grid",
+            "button": "Button",
+            "typography": "Typography",
+            "icons": "Icons"
+        },
+        "uiComponentsFeedback": {
+            "feedback": "Feedback",
+            "alert": "Alert",
+            "dialog": "Dialog",
+            "drawer": "Drawer",
+            "progress": "Progress",
+            "skeleton": "Skeleton",
+            "spinner": "Spinner",
+            "toast": "Toast"
+        },
+        "uiComponentsDataDisplay": {
+            "dataDisplay": "Data Display",
+            "avatar": "Avatar",
+            "badge": "Badge",
+            "calendar": "Calendar",
+            "cards": "Cards",
+            "table": "Table",
+            "tag": "Tag",
+            "timeline": "Timeline",
+            "tooltip": "Tooltip"
+        },
+        "uiComponentsForms": {
+            "forms": "Forms",
+            "checkbox": "Checkbox",
+            "datePicker": "Date Picker",
+            "formControl": "Form Control",
+            "input": "Input",
+            "inputGroup": "Input Group",
+            "radio": "Radio",
+            "segment": "Segment",
+            "select": "Select",
+            "switcher": "Switcher",
+            "timeInput": "Time Input",
+            "upload": "Upload"
+        },
+        "uiComponentsNavigation": {
+            "navigation": "Navigation",
+            "dropdown": "Dropdown",
+            "menu": "Menu",
+            "pagination": "Pagination",
+            "steps": "Steps",
+            "tabs": "Tabs"
+        },
+        "uiComponentsGraph": {
+            "graph": "Graph",
+            "charts": "Charts",
+            "maps": "Maps"
+        },
+        "pages": {
+            "pages": "Pages",
+            "welcome": "Welcome",
+            "accessDenied": "Access Denied"
+        },
+        "authentication": {
+            "authentication": "Authentication",
+            "signIn": "Sign In",
+            "signInSimple": "Simple",
+            "signInSide": "Side",
+            "signInSplit": "Split",
+            "signUp": "Sign Up",
+            "signUpSimple": "Simple",
+            "signUpSide": "Side",
+            "signUpSplit": "Split",
+            "forgotPassword": "Forgot Password",
+            "forgotPasswordSimple": "Simple",
+            "forgotPasswordSide": "Side",
+            "forgotPasswordSplit": "Split",
+            "resetPassword": "Reset Password",
+            "resetPasswordSimple": "Simple",
+            "resetPasswordSide": "Side",
+            "resetPasswordSplit": "Split",
+            "otpVerification": "Otp Verification",
+            "otpVerificationSimple": "Simple",
+            "otpVerificationSide": "Side",
+            "otpVerificationSplit": "Split"
+        }
+     
+    }
+}

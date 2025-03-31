@@ -1,0 +1,19 @@
+@import './assets/styles/app.css';
+
+
+
+.markdown-content p:has(strong):not(:first-child) {
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+
+.markdown-content ul:not(:first-child):not(:last-child) {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.markdown-content li:not(:first-child):not(:last-child) {
+    margin-bottom: 10px; 
+  
+}
+
