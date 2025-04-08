@@ -43,7 +43,7 @@ const CustomerDetailSection = ({
 
 
     useEffect(() => {
-        sessionStorage.removeItem("hasReloadedsPricing")
+
         const hasReloadedCreatePackage = sessionStorage.getItem("hasReloadedCreatePackage");
         if (!hasReloadedCreatePackage) {
             sessionStorage.setItem("hasReloadedCreatePackage", "true");
@@ -102,7 +102,7 @@ const CustomerDetailSection = ({
             });
 
             if (response.data) {
-
+                sessionStorage.removeItem("hasReloadedsPricing")
                 toast.success("Xóa thành công!", { autoClose: 2000 });
                 setTimeout(() => {
                     window.location.reload();
@@ -143,6 +143,7 @@ const CustomerDetailSection = ({
             });
 
             if (response.data) {
+                sessionStorage.removeItem("hasReloadedsPricing")
                 toast.success("Tạo thành công!", { autoClose: 2000 });
                 setTimeout(() => {
                     window.location.reload();
@@ -184,7 +185,7 @@ const CustomerDetailSection = ({
                     },
                 }
             );
-
+            sessionStorage.removeItem("hasReloadedsPricing")
             toast.success("Cập nhật thành công!", { autoClose: 2000 });
             setTimeout(() => {
                 window.location.reload();

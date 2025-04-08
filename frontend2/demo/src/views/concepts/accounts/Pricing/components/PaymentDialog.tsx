@@ -143,7 +143,7 @@ const PaymentDialog = () => {
                             { headers: { Authorization: `Bearer ${token}` } }
                         );
 
-                        console.log(response3.data);
+
 
                     }
                 }
@@ -314,7 +314,7 @@ const PaymentDialog = () => {
                             <TbCheck className="text-5xl text-white" />
                         </div>
                         <div className="mt-6">
-                            <h4>Thah toán thành công!</h4>
+                            <h4>Thanh toán thành công!</h4>
 
                         </div>
                         <div className="grid grid-cols-1 gap-2 mt-8">

@@ -16,6 +16,7 @@ interface SignInFormProps extends CommonProps {
     disableSubmit?: boolean
     passwordHint?: string | ReactNode
     setMessage?: (message: string) => void
+
 }
 
 type SignInFormSchema = {
@@ -43,8 +44,8 @@ const SignInForm = (props: SignInFormProps) => {
         control,
     } = useForm<SignInFormSchema>({
         defaultValues: {
-            email: '',
-            password: '',
+            email: 'admin@gmail.com',
+            password: 'admin',
         },
         resolver: zodResolver(validationSchema),
     })

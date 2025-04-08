@@ -51,7 +51,7 @@ const Plans = () => {
 
 
     useEffect(() => {
-        sessionStorage.removeItem("hasReloadedCreatePackage")
+        // sessionStorage.removeItem("hasReloadedCreatePackage")
         const hasReloadedCreatePackage = sessionStorage.getItem("hasReloadedsPricing");
         if (!hasReloadedCreatePackage) {
             sessionStorage.setItem("hasReloadedsPricing", "true");
@@ -145,67 +145,7 @@ const Plans = () => {
 
     // console.log("merge_data", mergedData)
 
-    const featuresList2: {
-        id: string
-        description: Record<string, string>
-    }[] = [
-            {
-                id: '001',
-                description: {
-                    basic: 'Task management',
-                    standard: 'Task management',
-                    pro: 'Task management',
-                },
-            },
-            {
-                id: '002',
-                description: {
-                    basic: 'Basic management tools',
-                    standard: 'Advance management tools',
-                    pro: 'Advance management tools',
-                },
-            },
-            {
-                id: '003',
-                description: {
-                    basic: 'Report generator',
-                    standard: 'Report generator',
-                    pro: 'Detailed report generator',
-                },
-            },
-            {
-                id: '004',
-                description: {
-                    basic: 'Email support',
-                    standard: 'Chat & email support',
-                    pro: '24/7 chat & email support',
-                },
-            },
-            {
-                id: 'fileSharing',
-                description: {
-                    basic: 'Files sharing',
-                    standard: 'Files sharing',
-                    pro: 'Files sharing',
-                },
-            },
-            {
-                id: 'advancedSecurity',
-                description: {
-                    basic: 'Advanced security protocols',
-                    standard: 'Advanced security protocols',
-                    pro: 'Advanced security protocols',
-                },
-            },
-            {
-                id: 'customIntegrations',
-                description: {
-                    basic: 'Third party service integration',
-                    standard: 'Third party service integration',
-                    pro: 'Third party service integration',
-                },
-            },
-        ]
+
 
     const first1 = (value: string) => {
         const parts = value.split(/(\[[^\]]+\])/);
@@ -255,34 +195,23 @@ const Plans = () => {
                             {/* <div className="">{getDaysById(plan.id)}</div> */}
                         </div>
                         <div className="flex flex-col gap-4 border-t border-gray-200 dark:border-gray-700 mt-6 pt-6">
-                            {Object.values(mergedData).map((feature) => (
-                                <div
-                                    key={feature.id}
-                                    className="flex items-center gap-4 font-semibold heading-text"
-                                >
-                                    {plan.features.includes(feature.id) && (
-                                        <>
-                                            <TbCheck
-                                                className={classNames(
-                                                    'text-2xl',
-                                                    plan.features.includes(
-                                                        feature.id,
-                                                    )
-                                                        ? 'text-primary'
-                                                        : 'text-gray-100',
-                                                )}
-                                            />
-                                            <span>
-                                                {
-                                                    feature.description[
-                                                    plan.id as string
-                                                    ]
-                                                }
-                                            </span>
-                                        </>
-                                    )}
-                                </div>
-                            ))}
+                            {Object.values(mergedData).map((feature) => {
+                                const description = feature.description[plan.id as string];
+
+                                return (
+                                    <div
+                                        key={feature.id}
+                                        className="flex items-center gap-4 font-semibold heading-text"
+                                    >
+                                        {plan.features.includes(feature.id) && description && (
+                                            <>
+                                                <TbCheck className="text-2xl text-primary" />
+                                                <span>{description}</span>
+                                            </>
+                                        )}
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                     <div className="mt-10">

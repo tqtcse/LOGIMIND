@@ -34,7 +34,7 @@ const updatePackage = (req, res) => {
         return res.status(400).json({ error: 'ID của gói là bắt buộc!' });
     }
 
-    const sql = `UPDATE Packages 
+    const sql = `UPDATE packages 
                  SET package_name = ?, description = ?, price = ?, day = ? 
                  WHERE id = ?`;
 
@@ -57,7 +57,7 @@ const addPackage = (req, res) => {
         return res.status(400).json({ error: 'Thiếu thông tin cần thiết!' });
     }
 
-    const sql = `INSERT INTO Packages (id, package_name, description, price, day) VALUES (?, ?, ?, ?, ?)`;
+    const sql = `INSERT INTO packages (id, package_name, description, price, day) VALUES (?, ?, ?, ?, ?)`;
 
     db.query(sql, [id_package, packagename, description, price, day], (err, result) => {
         if (err) {
@@ -75,7 +75,7 @@ const deletePackage = (req, res) => {
         return res.status(400).json({ error: 'Thiếu ID của gói!' });
     }
 
-    const sql = `DELETE FROM Packages WHERE id = ?`;
+    const sql = `DELETE FROM packages WHERE id = ?`;
 
     db.query(sql, [id_package], (err, result) => {
         if (err) {

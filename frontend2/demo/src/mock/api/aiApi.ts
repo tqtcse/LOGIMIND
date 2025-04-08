@@ -159,18 +159,18 @@ mock.onPost(`/api/ai/chat`).reply(async (config) => {
         // console.log("Gói ưu tiên nhất:", highestPriorityPackage.id_package
         // );
 
-        const response = await axios.post(`${API_BASE_URL}/model/chat`,
-            {
-                prompt: prompt,
-                package: highestPriorityPackage.id_package
-            },
-            {
-                headers: {
-                    'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json'
-                }
-            }
-        )
+        // const response = await axios.post(`${API_BASE_URL}/model/chat`,
+        //     {
+        //         prompt: prompt,
+        //         package: highestPriorityPackage.id_package
+        //     },
+        //     {
+        //         headers: {
+        //             'Authorization': `Bearer ${token}`,
+        //             'Content-Type': 'application/json'
+        //         }
+        //     }
+        // )
         //  if (!response.ok) {
         //     throw new Error(`HTTP error! status: ${response.status}`);
         // }
@@ -188,9 +188,9 @@ mock.onPost(`/api/ai/chat`).reply(async (config) => {
         // if (!response.ok) {
         //     throw new Error(`HTTP error! status: ${response.status}`);
         // }
-        if (response) {
-            console.log(response)
-        }
+        // if (response) {
+        //     console.log(response)
+        // }
         // const responseData = await response.json();
         // const responseData2 = String(responseData.response)
 
@@ -203,13 +203,7 @@ mock.onPost(`/api/ai/chat`).reply(async (config) => {
                     message: {
                         // content: responseData2,
                         content:
-                            `- **Ngày**: 2025-02-02  
-                        - **Tên hàng**: Chim bồ câu nuôi loại nhỏ Columba livia domestica (hàng không thuộc danh mục CITES), trọng lượng: 0.5 kgs/con, dùng làm cảnh  
-                        - **Trạng thái**: Nhập  
-                        - **Lượng**: 405 UNC  
-                        - **Xuất xứ**: NL  
-                        - **Điều kiện giao hàng**: CIP  
-                        - **Thuế suất XNK**: 5.00% ; **TTĐB**: 0.00% ; **VAT**: 0.00% ; **Tự vệ**: 0.00% ; **BVMT**: Không có thông tin`,
+                            `Đây chỉ là bản demo, tính năng chat không hỗ trợ.`,
                         //                     content: `
 
                         // `,

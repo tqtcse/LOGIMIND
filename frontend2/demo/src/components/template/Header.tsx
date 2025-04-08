@@ -2,7 +2,7 @@ import classNames from '@/utils/classNames'
 import { HEADER_HEIGHT } from '@/constants/theme.constant'
 import type { ReactNode } from 'react'
 import type { CommonProps } from '@/@types/common'
-
+import CloudButton from '../view/CloudButton'
 interface HeaderProps extends CommonProps {
     headerStart?: ReactNode
     headerEnd?: ReactNode
@@ -34,14 +34,21 @@ const Header = (props: HeaderProps) => {
                 <div className="header-action header-action-start">
                     {headerStart}
                 </div>
+
                 {headerMiddle && (
                     <div className="header-action header-action-middle">
                         {headerMiddle}
                     </div>
                 )}
+                <div>
+
+                </div>
+
                 <div className="header-action header-action-end">
+                    <CloudButton />
                     {headerEnd}
                 </div>
+
             </div>
         </header>
     )
