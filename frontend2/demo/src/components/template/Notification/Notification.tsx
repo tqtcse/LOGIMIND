@@ -10,10 +10,10 @@ import Tooltip from '@/components/ui/Tooltip'
 import NotificationAvatar from './NotificationAvatar'
 import NotificationToggle from './NotificationToggle'
 import { HiOutlineMailOpen } from 'react-icons/hi'
-import {
-    apiGetNotificationList,
-    apiGetNotificationCount,
-} from '@/services/CommonService'
+// import {
+//     apiGetNotificationList,
+//     apiGetNotificationCount,
+// } from '@/services/CommonService'
 import isLastChild from '@/utils/isLastChild'
 import useResponsive from '@/utils/hooks/useResponsive'
 import { useNavigate } from 'react-router-dom'
@@ -47,28 +47,28 @@ const _Notification = ({ className }: { className?: string }) => {
 
     const navigate = useNavigate()
 
-    const getNotificationCount = async () => {
-        const resp = await apiGetNotificationCount()
-        if (resp.count > 0) {
-            setNoResult(false)
-            setUnreadNotification(true)
-        } else {
-            setNoResult(true)
-        }
-    }
+    // const getNotificationCount = async () => {
+    //     const resp = await apiGetNotificationCount()
+    //     if (resp.count > 0) {
+    //         setNoResult(false)
+    //         setUnreadNotification(true)
+    //     } else {
+    //         setNoResult(true)
+    //     }
+    // }
 
-    useEffect(() => {
-        getNotificationCount()
-    }, [])
+    // useEffect(() => {
+    //     getNotificationCount()
+    // }, [])
 
-    const onNotificationOpen = async () => {
-        if (notificationList.length === 0) {
-            setLoading(true)
-            const resp = await apiGetNotificationList()
-            setLoading(false)
-            setNotificationList(resp)
-        }
-    }
+    // const onNotificationOpen = async () => {
+    //     if (notificationList.length === 0) {
+    //         setLoading(true)
+    //         const resp = await apiGetNotificationList()
+    //         setLoading(false)
+    //         setNotificationList(resp)
+    //     }
+    // }
 
     const onMarkAllAsRead = () => {
         const list = notificationList.map((item: NotificationList) => {
@@ -116,7 +116,7 @@ const _Notification = ({ className }: { className?: string }) => {
             }
             menuClass="min-w-[280px] md:min-w-[340px]"
             placement={larger.md ? 'bottom-end' : 'bottom'}
-            onOpen={onNotificationOpen}
+
         >
             <Dropdown.Item variant="header">
                 <div className="dark:border-gray-700 px-2 flex items-center justify-between mb-1">
@@ -158,11 +158,10 @@ const _Notification = ({ className }: { className?: string }) => {
                                 </div>
                                 <Badge
                                     className="absolute top-4 ltr:right-4 rtl:left-4 mt-1.5"
-                                    innerClass={`${
-                                        item.readed
-                                            ? 'bg-gray-300 dark:bg-gray-600'
-                                            : 'bg-primary'
-                                    } `}
+                                    innerClass={`${item.readed
+                                        ? 'bg-gray-300 dark:bg-gray-600'
+                                        : 'bg-primary'
+                                        } `}
                                 />
                             </div>
                             {!isLastChild(notificationList, index) ? (

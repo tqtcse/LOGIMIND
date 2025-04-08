@@ -1,0 +1,1 @@
+import{l as d,j as n,c as a}from"./index-DtwSxASm.js";import{C as c}from"./Card-CvsXYMKX.js";const i=r=>{const{adaptiveCardActive:s}=d(),{className:t,bodyClass:e,...o}=r;return n.jsx(c,{className:a(t,s&&"border-none dark:bg-transparent"),bodyClass:a(e,s&&"p-0"),...o})};export{i as A};
